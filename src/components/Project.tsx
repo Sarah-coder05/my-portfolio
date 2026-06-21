@@ -10,8 +10,6 @@ import edusproute1 from "../../public/edusproute1.png";
 import edusproute2 from "../../public/edusproute2.png";
 
 interface Project {
-  number: string;
-  category: string;
   title: string;
   description: string;
   image1: StaticImageData;
@@ -23,8 +21,6 @@ interface Project {
 
 const projects: Project[] = [
   {
-    number: "01",
-    category: "EdTech Platform",
     title: "Vikidemy Hub",
     description:
       "A full-stack EdTech platform with multi-role dashboards (parent, student, educator, admin), multi-currency payments in NGN and USD, automated session scheduling, renewal reminders via cron jobs, and transactional email notifications. Built end to end.",
@@ -35,8 +31,6 @@ const projects: Project[] = [
     githubUrl: "https://github.com/Sarah-coder05/vikidemy_hub",
   },
   {
-    number: "02",
-    category: "Investment Platform",
     title: "Velocity Africa CMS",
     description:
       "Built a headless CMS using Strapi Cloud for an African investment firm, enabling the team to manage blog posts, insights, portfolio news and events independently. Also migrated an interactive data report from Vite into Next.js.",
@@ -46,8 +40,6 @@ const projects: Project[] = [
     liveUrl: "https://velocity.africa",
   },
   {
-    number: "03",
-    category: "EdTech Dashboard",
     title: "Edusproute",
     description:
       "An EdTech platform for managing tech courses, helping educators and students organize learning materials and track progress efficiently.",
@@ -158,9 +150,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             zIndex: 2,
             opacity: 0.9,
           }}
-        >
-          {project.number} — {project.category}
-        </div>
+        ></div>
       </div>
 
       {/* Content */}
@@ -328,7 +318,7 @@ export default function Projects() {
             transition: "opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s",
           }}
         >
-          Things I've built.
+          Things I&apos;ve built.
         </h2>
 
         <p

@@ -79,13 +79,13 @@ export default function About() {
               Mathematics;
             </strong>{" "}
             which means I approach problems analytically before I approach them
-            creatively. I don't just build what looks good. I build what works.
+            creatively. I don&apos;t just build what looks good. I build what works.
           </p>
           <p
             className="mb-5"
             style={{ color: "var(--muted)", fontWeight: 300, lineHeight: 1.9 }}
           >
-            Over the past few years I've shipped full production products, an{" "}
+            Over the past few years I&apos;ve shipped full production products, an{" "}
             <strong style={{ color: "var(--text)", fontWeight: 500 }}>
               EdTech platform
             </strong>{" "}

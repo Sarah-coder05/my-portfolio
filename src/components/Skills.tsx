@@ -105,7 +105,7 @@ export default function Skills() {
           maxWidth: "440px",
         }}
       >
-        Technologies I've used in real production environments
+        Technologies I&apos;ve used in real production environments
       </p>
 
       {/* Orbital Universe */}

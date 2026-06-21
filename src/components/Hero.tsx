@@ -109,7 +109,7 @@ export default function Hero() {
             }}
           >
             <strong style={{ color: "var(--text)", fontWeight: 500 }}>
-              I don't just write code. I build products people actually use.
+              I don&apos;t just write code. I build products people actually use.
             </strong>{" "}
             From EdTech platforms to headless CMS integrations, I engineer
             frontend experiences that are clean, scalable, and production-ready.

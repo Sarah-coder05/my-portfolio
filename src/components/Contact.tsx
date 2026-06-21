@@ -80,7 +80,7 @@ export default function Contact() {
                 color: "var(--text)",
               }}
             >
-              Let's build something.
+              Let&apos;s build something.
             </h2>
 
             <p
@@ -159,7 +159,7 @@ export default function Contact() {
                   className="font-mono-custom text-center"
                   style={{ color: "var(--accent)", fontSize: "14px" }}
                 >
-                  Message sent. I'll get back to you shortly.
+                  Message sent. I&apos;ll get back to you shortly.
                 </p>
               </div>
             ) : (
