@@ -31,7 +31,7 @@ export default function Footer() {
           letterSpacing: "1px",
         }}
       >
-        Built with Next.js · Deployed on Vercel
+        Built with Intentionality
       </p>
     </footer>
   );

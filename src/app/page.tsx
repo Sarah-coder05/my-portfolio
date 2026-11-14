@@ -5,6 +5,7 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Project";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import CoreExpertise from "@/components/CoreExpertise";
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <div className="section-divider" />
+        <CoreExpertise />
         <div className="section-divider" />
         <About />
         <div className="section-divider" />

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,9 +18,9 @@ export default function Navbar() {
     <nav
       className="fixed top-0 left-0 w-full z-50"
       style={{
-        background: "rgba(8, 12, 20, 0.95)",
+        background: "var(--nav-bg)",
         backdropFilter: "blur(16px)",
-        borderBottom: "1px solid rgba(255,255,255,0.08)",
+        borderBottom: "1px solid var(--nav-border)",
       }}
     >
       <div
@@ -35,17 +36,17 @@ export default function Navbar() {
         {/* Logo */}
         <a
           href="#home"
-          className="font-syne text-[30px] font-extrabold"
+          className="font-heading text-[30px] font-extrabold"
           style={{
-            color: "#F1F5F9",
+            color: "var(--text)",
             letterSpacing: "-0.5px",
             textDecoration: "none",
           }}
         >
-          Uf<span style={{ color: "#4F7FFF" }}>.</span>
+          Uf<span style={{ color: "var(--accent)" }}>.</span>
         </a>
 
-        {/* Desktop links */}
+        {/* Desktop links + theme toggle */}
         <ul
           className="nav-desktop"
           style={{
@@ -59,48 +60,48 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="font-mono-custom"
+                className="font-mono-custom text-[var(--muted)] transition-colors duration-200 hover:text-[var(--text)]"
                 style={{
-                  color: "rgba(241,245,249,0.5)",
                   letterSpacing: "2px",
                   textDecoration: "none",
                   fontSize: "11px",
                   textTransform: "uppercase",
                 }}
-                onMouseEnter={(e) =>
-                  ((e.target as HTMLElement).style.color = "#F1F5F9")
-                }
-                onMouseLeave={(e) =>
-                  ((e.target as HTMLElement).style.color =
-                    "rgba(241,245,249,0.5)")
-                }
               >
                 {link.label}
               </a>
             </li>
           ))}
+          <li>
+            <ThemeToggle />
+          </li>
         </ul>
 
-        {/* Mobile menu button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="nav-mobile-btn"
-          style={{
-            color: "#F1F5F9",
-            background: "none",
-            border: "none",
-            cursor: "pointer",
-          }}
-        >
-          {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
-        </button>
+        {/* Mobile: theme toggle + menu button */}
+        <div className="flex items-center gap-4 md:hidden">
+          <ThemeToggle />
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="nav-mobile-btn"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
+            style={{
+              color: "var(--text)",
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+            }}
+          >
+            {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
       {isOpen && (
         <div
           style={{
-            borderTop: "1px solid rgba(255,255,255,0.06)",
+            borderTop: "1px solid var(--border)",
             padding: "16px 24px 24px",
             display: "flex",
             flexDirection: "column",
@@ -112,9 +113,8 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="font-mono-custom"
+              className="font-mono-custom text-[var(--muted)] transition-colors duration-200 hover:text-[var(--text)]"
               style={{
-                color: "rgba(241,245,249,0.5)",
                 textDecoration: "none",
                 fontSize: "11px",
                 textTransform: "uppercase",

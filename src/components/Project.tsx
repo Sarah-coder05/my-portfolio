@@ -73,7 +73,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       onMouseLeave={() => setHovered(false)}
       style={{
         background: "var(--surface)",
-        border: `1px solid ${hovered ? "rgba(79,127,255,0.3)" : "var(--border)"}`,
+        border: `1px solid ${hovered ? "var(--accent-border)" : "var(--border)"}`,
         borderRadius: "12px",
         overflow: "hidden",
         opacity: visible ? 1 : 0,
@@ -112,7 +112,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               objectPosition: "top",
               transform: hovered ? "scale(1.05)" : "scale(1)",
               transition: "transform 0.5s ease",
-              filter: "brightness(0.75)",
+              filter: "brightness(var(--img-brightness))",
             }}
           />
         </div>
@@ -126,7 +126,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               objectPosition: "top",
               transform: hovered ? "scale(1.05)" : "scale(1)",
               transition: "transform 0.5s ease",
-              filter: "brightness(0.75)",
+              filter: "brightness(var(--img-brightness))",
             }}
           />
         </div>
@@ -135,7 +135,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(to top, rgba(8,12,20,0.7) 0%, transparent 60%)",
+              "linear-gradient(to top, var(--img-overlay) 0%, transparent 60%)",
             zIndex: 1,
           }}
         />
@@ -156,7 +156,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       {/* Content */}
       <div style={{ padding: "28px" }}>
         <h3
-          className="font-syne font-bold mb-3"
+          className="font-heading font-bold mb-3"
           style={{
             fontSize: "18px",
             letterSpacing: "-0.5px",
@@ -193,8 +193,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               style={{
                 fontSize: "10px",
                 color: "var(--accent)",
-                background: "rgba(79,127,255,0.08)",
-                border: "1px solid rgba(79,127,255,0.15)",
+                background: "var(--accent-soft)",
+                border: "1px solid var(--accent-soft-border)",
                 padding: "5px 12px",
                 borderRadius: "4px",
                 letterSpacing: "0.5px",
@@ -278,35 +278,10 @@ export default function Projects() {
       style={{ maxWidth: "1300px", margin: "0 auto", padding: "100px 24px" }}
     >
       <div ref={ref}>
-        <div
-          className="font-mono-custom"
-          style={{
-            fontSize: "11px",
-            color: "var(--accent)",
-            letterSpacing: "3px",
-            textTransform: "uppercase",
-            marginBottom: "16px",
-            display: "flex",
-            alignItems: "center",
-            gap: "12px",
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(20px)",
-            transition: "opacity 0.6s ease, transform 0.6s ease",
-          }}
-        >
-          <span
-            style={{
-              display: "block",
-              width: "24px",
-              height: "1px",
-              background: "var(--accent)",
-            }}
-          />
-          Selected Work
-        </div>
+        
 
         <h2
-          className="font-syne font-extrabold"
+          className="font-heading font-extrabold"
           style={{
             fontSize: "clamp(32px, 4vw, 48px)",
             letterSpacing: "-1.5px",

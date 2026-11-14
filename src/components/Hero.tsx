@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import profilePic from "../../public/profilePic.png";
+import CompanyTicker from "./CompanyTicker";
+import HeroSparkles from "./HeroSparkles";
 
 export default function Hero() {
   return (
@@ -10,12 +12,15 @@ export default function Hero() {
       style={{
         minHeight: "100vh",
         display: "flex",
-        alignItems: "center",
+        flexDirection: "column",
 
         position: "relative",
         overflow: "hidden",
       }}
     >
+      {/* Twinkling blue + gold sparkle field */}
+      <HeroSparkles />
+
       {/* Background glows */}
       <div
         style={{
@@ -23,7 +28,7 @@ export default function Hero() {
           width: "600px",
           height: "600px",
           background:
-            "radial-gradient(circle, rgba(79,127,255,0.07) 0%, transparent 70%)",
+            "radial-gradient(circle, var(--glow-1) 0%, transparent 70%)",
           top: "-100px",
           right: "-80px",
           pointerEvents: "none",
@@ -35,7 +40,7 @@ export default function Hero() {
           width: "400px",
           height: "400px",
           background:
-            "radial-gradient(circle, rgba(167,139,250,0.05) 0%, transparent 70%)",
+            "radial-gradient(circle, var(--glow-2) 0%, transparent 70%)",
           bottom: "0",
           left: "200px",
           pointerEvents: "none",
@@ -47,44 +52,27 @@ export default function Hero() {
         style={{
           maxWidth: "1300px",
           margin: "0 auto",
-          padding: "80px 24px",
+          padding: "120px 24px 64px",
           width: "100%",
+          // Fill the space above the companies strip and centre the content in it
+          flex: 1,
+          alignContent: "center",
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
           gap: "60px",
           alignItems: "center",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         {/* Left — Text */}
         <div className="animate-fadeUp">
           {/* Eyebrow */}
-          <div
-            className="font-mono-custom"
-            style={{
-              fontSize: "11px",
-              color: "var(--accent)",
-              letterSpacing: "3px",
-              textTransform: "uppercase",
-              marginBottom: "24px",
-              display: "flex",
-              alignItems: "center",
-              gap: "12px",
-            }}
-          >
-            <span
-              style={{
-                display: "block",
-                width: "32px",
-                height: "1px",
-                background: "var(--accent)",
-              }}
-            />
-            Frontend Engineer
-          </div>
+         
 
           {/* Name */}
           <h1
-            className="font-syne"
+            className="font-heading"
             style={{
               fontSize: "clamp(52px, 7vw, 84px)",
               fontWeight: 800,
@@ -101,7 +89,7 @@ export default function Hero() {
           <p
             style={{
               fontSize: "17px",
-              color: "rgba(241,245,249,0.65)",
+              color: "var(--text-soft)",
               lineHeight: 1.85,
               fontWeight: 300,
               maxWidth: "480px",
@@ -131,7 +119,7 @@ export default function Hero() {
                 transition: "background 0.2s",
               }}
               onMouseEnter={(e) =>
-                ((e.currentTarget as HTMLElement).style.background = "#3d6ce0")
+                ((e.currentTarget as HTMLElement).style.background = "var(--accent-hover)")
               }
               onMouseLeave={(e) =>
                 ((e.currentTarget as HTMLElement).style.background =
@@ -157,7 +145,7 @@ export default function Hero() {
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLElement).style.color = "var(--text)";
                 (e.currentTarget as HTMLElement).style.borderColor =
-                  "rgba(255,255,255,0.15)";
+                  "var(--border-strong)";
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLElement).style.color = "var(--muted)";
@@ -207,7 +195,7 @@ export default function Hero() {
                   position: "absolute",
                   inset: 0,
                   background:
-                    "linear-gradient(to top, rgba(8,12,20,0.4) 0%, transparent 50%)",
+                    "linear-gradient(to top, var(--img-overlay-soft) 0%, transparent 50%)",
                 }}
               />
             </div>
@@ -228,7 +216,7 @@ export default function Hero() {
               }}
             >
               <strong
-                className="font-syne"
+                className="font-heading"
                 style={{
                   display: "block",
                   color: "var(--accent)",
@@ -246,6 +234,20 @@ export default function Hero() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Companies strip along the bottom of the hero, full content width */}
+      <div
+        style={{
+          maxWidth: "1300px",
+          margin: "0 auto",
+          padding: "24px 24px 40px",
+          width: "100%",
+          position: "relative",
+          zIndex: 1,
+        }}
+      >
+        <CompanyTicker />
       </div>
     </section>
   );

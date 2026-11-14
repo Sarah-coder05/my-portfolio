@@ -31,21 +31,7 @@ export default function About() {
       className="py-28"
       style={{ maxWidth: "1300px", margin: "0 auto", padding: "100px 24px" }}
     >
-      {/* Label */}
-      <div
-        className="font-mono-custom text-xs uppercase tracking-widest mb-4 flex items-center gap-3"
-        style={{ color: "var(--accent)", letterSpacing: "3px" }}
-      >
-        <span
-          style={{
-            display: "block",
-            width: "24px",
-            height: "1px",
-            background: "var(--accent)",
-          }}
-        />
-        About
-      </div>
+     
 
       <div className="grid md:grid-cols-2 gap-20 items-center">
         {/* Left — Text */}
@@ -57,7 +43,7 @@ export default function About() {
           }}
         >
           <h2
-            className="font-syne font-extrabold mb-8"
+            className="font-heading font-extrabold mb-8"
             style={{
               fontSize: "clamp(32px, 4vw, 48px)",
               letterSpacing: "-1.5px",
@@ -130,7 +116,7 @@ export default function About() {
               }}
             >
               <div
-                className="font-syne font-extrabold"
+                className="font-heading font-extrabold"
                 style={{
                   fontSize: "36px",
                   color: "var(--accent)",

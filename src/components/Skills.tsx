@@ -69,24 +69,10 @@ export default function Skills() {
       id="skills"
       style={{ maxWidth: "1300px", margin: "0 auto", padding: "100px 24px" }}
     >
-      {/* Label */}
-      <div
-        className="font-mono-custom text-xs uppercase tracking-widest mb-4 flex items-center gap-3"
-        style={{ color: "var(--accent)", letterSpacing: "3px" }}
-      >
-        <span
-          style={{
-            display: "block",
-            width: "24px",
-            height: "1px",
-            background: "var(--accent)",
-          }}
-        />
-        Technical Skills
-      </div>
+     
 
       <h2
-        className="font-syne font-extrabold mb-3"
+        className="font-heading font-extrabold mb-3"
         style={{
           fontSize: "clamp(32px, 4vw, 48px)",
           letterSpacing: "-1.5px",
@@ -162,7 +148,7 @@ export default function Skills() {
               width: `${group.size}px`,
               height: `${group.size}px`,
               borderRadius: "50%",
-              border: "1px solid rgba(255,255,255,0.04)",
+              border: "1px solid var(--orbit-border)",
             }}
           >
             {group.skills.map((skill) => {

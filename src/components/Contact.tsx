@@ -45,7 +45,7 @@ export default function Contact() {
             width: "300px",
             height: "300px",
             background:
-              "radial-gradient(circle, rgba(79,127,255,0.07) 0%, transparent 70%)",
+              "radial-gradient(circle, var(--glow-1) 0%, transparent 70%)",
             top: "-100px",
             left: "50%",
             transform: "translateX(-50%)",
@@ -56,23 +56,10 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-16 items-start relative">
           {/* Left */}
           <div>
-            <div
-              className="font-mono-custom text-xs uppercase tracking-widest mb-6 flex items-center gap-3"
-              style={{ color: "var(--accent)", letterSpacing: "3px" }}
-            >
-              <span
-                style={{
-                  display: "block",
-                  width: "24px",
-                  height: "1px",
-                  background: "var(--accent)",
-                }}
-              />
-              Contact
-            </div>
+            
 
             <h2
-              className="font-syne font-extrabold mb-4"
+              className="font-heading font-extrabold mb-4"
               style={{
                 fontSize: "clamp(28px, 4vw, 42px)",
                 letterSpacing: "-1.5px",
@@ -183,7 +170,7 @@ export default function Contact() {
                       required
                       className="w-full transition-all duration-200"
                       style={{
-                        background: "rgba(255,255,255,0.03)",
+                        background: "var(--input-bg)",
                         border: "1px solid var(--border)",
                         borderRadius: "6px",
                         padding: "12px 16px",
@@ -221,7 +208,7 @@ export default function Contact() {
                     required
                     className="w-full transition-all duration-200 resize-none"
                     style={{
-                      background: "rgba(255,255,255,0.03)",
+                      background: "var(--input-bg)",
                       border: "1px solid var(--border)",
                       borderRadius: "6px",
                       padding: "12px 16px",
