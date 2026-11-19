@@ -2,16 +2,17 @@
 
 import React, { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
+import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const links = [
-    { href: "#about", label: "About" },
-    { href: "#projects", label: "Work" },
-    { href: "#skills", label: "Skills" },
-    { href: "#contact", label: "Contact" },
+    { href: "/#work", label: "Work" },
+    { href: "/#about", label: "About" },
+    { href: "/#skills", label: "Skills" },
+    { href: "/#contact", label: "Contact" },
   ];
 
   return (
@@ -34,8 +35,8 @@ export default function Navbar() {
         }}
       >
         {/* Logo */}
-        <a
-          href="#home"
+        <Link
+          href="/#home"
           className="font-heading text-[30px] font-extrabold"
           style={{
             color: "var(--text)",
@@ -44,7 +45,7 @@ export default function Navbar() {
           }}
         >
           Uf<span style={{ color: "var(--accent)" }}>.</span>
-        </a>
+        </Link>
 
         {/* Desktop links + theme toggle */}
         <ul
@@ -74,6 +75,11 @@ export default function Navbar() {
           ))}
           <li>
             <ThemeToggle />
+          </li>
+          <li>
+            <Link href="/#contact" className="btn btn-primary btn-sm">
+              Get in touch
+            </Link>
           </li>
         </ul>
 

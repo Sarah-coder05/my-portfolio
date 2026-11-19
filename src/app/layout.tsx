@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./cosmic.css";
 import ThemeProvider from "@/components/ThemeProvider";
+import Starfield from "@/components/cosmic/Starfield";
 
 export const metadata: Metadata = {
   title: "Ufedo — Frontend Engineer",
@@ -16,7 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <Starfield />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
