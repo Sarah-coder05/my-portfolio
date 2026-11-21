@@ -38,7 +38,7 @@ export default async function CaseStudy({ params }: Props) {
       <Navbar />
       <main className="cs" style={a(p.accent)}>
         <Link href="/#work" className="cs-back">
-          <HiArrowLeft aria-hidden /> All worlds
+          <HiArrowLeft aria-hidden /> All products
         </Link>
 
         <header className="cs-head">
@@ -149,13 +149,13 @@ export default async function CaseStudy({ params }: Props) {
             <HiArrowLeft aria-hidden />
             <span className="planet" />
             <span>
-              <small>Previous world</small>
+              <small>Previous product</small>
               {prev.company}
             </span>
           </Link>
           <Link href={`/work/${next.slug}`} className="next" style={a(next.accent)}>
             <span>
-              <small>Next world</small>
+              <small>Next product</small>
               {next.company}
             </span>
             <span className="planet" />

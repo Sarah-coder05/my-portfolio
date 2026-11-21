@@ -192,8 +192,8 @@ export default function WorldsCarousel() {
       <div className="cz-glow" style={{ "--a": cur.accent } as CSSProperties} aria-hidden />
 
       <div className="cz-head">
-        <h2 className="font-display">Pick a world to land on</h2>
-        <p>Use the arrows or swipe to move between projects. Select one to land.</p>
+        <h2 className="font-display">Pick a product to explore</h2>
+        <p>Use the arrows or swipe to move between projects. Select one to see the details.</p>
       </div>
 
       <div ref={ring} className="cz-ring">
@@ -231,13 +231,13 @@ export default function WorldsCarousel() {
       <div className="cz-scrim" onClick={close} aria-hidden />
 
       <div className="cz-actions">
-        <button type="button" className="btn btn-outline btn-lg" onClick={() => go(-1)} aria-label="Previous world">
+        <button type="button" className="btn btn-outline btn-lg" onClick={() => go(-1)} aria-label="Previous product">
           <HiArrowLeft aria-hidden />
         </button>
         <button type="button" className="btn btn-primary btn-lg" onClick={select}>
           <HiArrowsPointingOut aria-hidden /> Explore {cur.company}
         </button>
-        <button type="button" className="btn btn-outline btn-lg" onClick={() => go(1)} aria-label="Next world">
+        <button type="button" className="btn btn-outline btn-lg" onClick={() => go(1)} aria-label="Next product">
           <HiArrowRight aria-hidden />
         </button>
       </div>
@@ -328,7 +328,7 @@ export default function WorldsCarousel() {
               </a>
             )}
             <button type="button" className="btn btn-outline" onClick={() => go(1)}>
-              Next world
+              Next product
             </button>
           </div>
         </div>

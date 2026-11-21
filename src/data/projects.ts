@@ -1,4 +1,4 @@
-// Every project ("world") on the site. The orbit hero, the projects carousel and
+// Every project on the site. The orbit hero, the projects carousel and
 // the /work/[slug] case-study pages all read from this one list.
 
 export type ProjectImage = { src: string; alt: string };

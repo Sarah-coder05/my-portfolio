@@ -136,7 +136,7 @@ export default function OrbitHero() {
       <div className="orbit-copy">
         <p className="orbit-eyebrow">Ufedo · Sarah Moses, frontend engineer</p>
         <h1 className="orbit-title font-display">
-          {PROJECTS.length === 5 ? "Five" : PROJECTS.length} worlds I helped build.
+          {PROJECTS.length === 5 ? "Five" : PROJECTS.length === 6 ? "Six" : PROJECTS.length} products I&apos;ve built.
         </h1>
         <p className="orbit-sub">
           From EdTech platforms to a venture fund&apos;s CMS, a marketplace and a livestock dashboard. I build
@@ -200,7 +200,7 @@ export default function OrbitHero() {
         ))}
       </div>
 
-      {/* Phones: the moving cards are too small to tap, so list the worlds instead */}
+      {/* Phones: the moving cards are too small to tap, so list the products instead */}
       <ul className="orbit-list" aria-label="Projects">
         {PROJECTS.map((p, k) => (
           <li key={p.slug}>
