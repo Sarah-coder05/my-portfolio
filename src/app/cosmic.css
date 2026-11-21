@@ -576,8 +576,18 @@ html.light .cz-glow {
   display: block;
   width: 100%;
   height: auto;
-  -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent);
-  mask-image: linear-gradient(to bottom, #000 82%, transparent);
+}
+/* Fade the bottom of the photo AND the light into the page together, so the
+   light never shows through the photo */
+.about-figure::after {
+  content: "";
+  position: absolute;
+  left: -12%;
+  right: -12%;
+  bottom: -5%;
+  height: 28%;
+  background: linear-gradient(to bottom, transparent 0%, var(--bg) 68%, var(--bg) 88%, transparent 100%);
+  pointer-events: none;
 }
 .about-stats {
   display: grid;
