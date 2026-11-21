@@ -5,7 +5,7 @@ import ThemeProvider from "@/components/ThemeProvider";
 import Starfield from "@/components/cosmic/Starfield";
 
 export const metadata: Metadata = {
-  title: "Ufedo — Frontend Engineer",
+  title: "Sarah Moses — Frontend Engineer",
   description:
     "Frontend Engineer building scalable, production-ready web products. Based in Abuja, Nigeria.",
 };

@@ -536,6 +536,131 @@ html.light .cz-glow {
   }
 }
 
+/* ---------- All products grid ---------- */
+.pgrid-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 24px 96px;
+}
+.pgrid-title {
+  margin: 0 0 28px;
+  font-size: clamp(26px, 3vw, 36px);
+  color: var(--text);
+}
+.pgrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+.pcard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 22px;
+  border-radius: 22px;
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  color: var(--text);
+  text-decoration: none;
+  transition:
+    border-color 200ms,
+    transform 200ms var(--ease-out);
+}
+.pcard:hover {
+  border-color: var(--glass-border-hover);
+  transform: translateY(-2px);
+}
+.pcard:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+.pcard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+.pcard .planet {
+  width: 44px;
+}
+.pcard-go {
+  color: var(--muted);
+  font-size: 18px;
+  transition: color 200ms;
+}
+.pcard:hover .pcard-go {
+  color: var(--text);
+}
+.pcard-name {
+  font-size: 22px;
+  line-height: 1.2;
+}
+.pcard-sub {
+  color: var(--text-soft);
+  line-height: 1.5;
+  flex: 1;
+}
+.pcard-meta {
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ---------- About photo ---------- */
+.about-photo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.about-glow {
+  position: absolute;
+  left: 50%;
+  bottom: 6%;
+  width: min(420px, 86%);
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 32% 28%,
+    color-mix(in oklch, var(--accent) 45%, #fff) 0%,
+    var(--accent) 38%,
+    color-mix(in oklch, var(--accent) 40%, var(--planet-dark)) 100%
+  );
+  box-shadow: 0 0 80px color-mix(in oklch, var(--accent) var(--planet-glow-pct), transparent);
+  opacity: 0.85;
+}
+.about-img {
+  position: relative;
+  width: min(420px, 90%);
+  height: auto;
+  -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent);
+  mask-image: linear-gradient(to bottom, #000 82%, transparent);
+}
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 56px;
+}
+.about-stat {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+}
+@media (max-width: 768px) {
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 /* ---------- Case-study page ---------- */
 .cs {
   max-width: 1080px;

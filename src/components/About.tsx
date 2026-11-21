@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 export default function About() {
   const [visible, setVisible] = useState(false);
@@ -57,7 +58,7 @@ export default function About() {
           </h2>
 
           <p className="mb-5" style={{ color: "var(--muted)", fontWeight: 300, lineHeight: 1.9 }}>
-            I studied <strong style={{ color: "var(--text)", fontWeight: 500 }}>Mathematics</strong> and spent my first working years
+            I studied <strong style={{ color: "var(--text)", fontWeight: 500 }}>Mathematics</strong>{" "}and spent my first working years
             teaching it, first as a maths instructor at uLesson, then reviewing
             curriculum at Slate NG. Teaching taught me the thing I still build by:
             if people can&apos;t follow it, it doesn&apos;t work, no matter how
@@ -79,54 +80,62 @@ export default function About() {
           </p>
         </div>
 
-        {/* Right — Stats */}
+        {/* Right — Photo */}
         <div
-          className="grid grid-cols-2 gap-4"
+          className="about-photo"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(30px)",
             transition: "opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s",
-            padding: "30px 24px",
           }}
         >
-          {stats.map((stat, i) => (
+          <span className="about-glow" aria-hidden />
+          <Image
+            src="/sarah-moses.png"
+            alt="Sarah Moses"
+            width={925}
+            height={1100}
+            sizes="(max-width: 768px) 80vw, 420px"
+            className="about-img"
+          />
+        </div>
+      </div>
+
+      {/* Stats */}
+      <div
+        className="about-stats"
+        style={{
+          opacity: visible ? 1 : 0,
+          transition: "opacity 0.7s ease 0.3s",
+        }}
+      >
+        {stats.map((stat) => (
+          <div key={stat.label} className="about-stat">
             <div
-              key={i}
+              className="font-heading"
               style={{
-                background: "var(--surface)",
-                border: "1px solid var(--border)",
-                borderRadius: "10px",
-                padding: "24px",
-                margin: "6px 10px",
+                fontSize: "36px",
+                color: "var(--accent)",
+                lineHeight: 1,
+                marginBottom: "6px",
               }}
             >
-              <div
-                className="font-heading font-extrabold"
-                style={{
-                  fontSize: "36px",
-                  color: "var(--accent)",
-                  letterSpacing: "-1px",
-                  lineHeight: 1,
-                  marginBottom: "6px",
-                }}
-              >
-                {stat.num}
-              </div>
-              <div
-                className="font-mono-custom"
-                style={{
-                  fontSize: "11px",
-                  color: "var(--muted)",
-                  letterSpacing: "0.5px",
-                  textTransform: "uppercase",
-                  lineHeight: 1.5,
-                }}
-              >
-                {stat.label}
-              </div>
+              {stat.num}
             </div>
-          ))}
-        </div>
+            <div
+              className="font-mono-custom"
+              style={{
+                fontSize: "11px",
+                color: "var(--muted)",
+                letterSpacing: "0.5px",
+                textTransform: "uppercase",
+                lineHeight: 1.5,
+              }}
+            >
+              {stat.label}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

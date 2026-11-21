@@ -21,7 +21,7 @@ export default function Footer() {
           letterSpacing: "1px",
         }}
       >
-        © {new Date().getFullYear()} Ufedo — Sarah Moses
+        © {new Date().getFullYear()} Sarah Moses
       </p>
       <p
         className="font-mono-custom"

@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section id="home" className="hero" aria-label="Introduction">
       <div className="hero-copy">
-        <p className="hero-eyebrow">Ufedo · Sarah Moses, frontend engineer</p>
+        <p className="hero-eyebrow">Hi, I&apos;m Sarah, a frontend engineer in Abuja</p>
         <h1 className="hero-title font-display">Some of the products I&apos;ve worked on.</h1>
         <p className="hero-sub">
           From EdTech platforms to a venture fund&apos;s CMS, a marketplace and a livestock

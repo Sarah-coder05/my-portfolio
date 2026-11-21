@@ -43,7 +43,7 @@ export default function Navbar() {
             textDecoration: "none",
           }}
         >
-          Uf<span style={{ color: "var(--accent)" }}>.</span>
+          Sarah<span style={{ color: "var(--accent)" }}>.</span>
         </Link>
 
         {/* Desktop links + theme toggle */}
