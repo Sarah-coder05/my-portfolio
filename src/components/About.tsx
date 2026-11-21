@@ -89,6 +89,7 @@ export default function About() {
             transition: "opacity 0.7s ease 0.15s, transform 0.7s ease 0.15s",
           }}
         >
+          <span className="about-figure">
           <span className="about-glow" aria-hidden />
           <Image
             src="/sarah-moses.png"
@@ -98,6 +99,7 @@ export default function About() {
             sizes="(max-width: 768px) 80vw, 420px"
             className="about-img"
           />
+          </span>
         </div>
       </div>
 
