@@ -18,10 +18,10 @@ export default function About() {
   }, []);
 
   const stats = [
-    { num: "6+", label: "Production projects shipped" },
+    { num: "6", label: "Products built" },
     { num: "3+", label: "Years building for the web" },
+    { num: "5", label: "Years in EdTech" },
     { num: "14+", label: "Technologies in production" },
-    { num: "3", label: "Roles — Dev & Analyst" },
   ];
 
   return (
@@ -51,46 +51,31 @@ export default function About() {
               color: "var(--text)",
             }}
           >
-            Engineer by trade.
+            From the maths classroom
             <br />
-            Builder by nature.
+            to building products.
           </h2>
 
-          <p
-            className="mb-5"
-            style={{ color: "var(--muted)", fontWeight: 300, lineHeight: 1.9 }}
-          >
-            I'm a frontend engineer with a background in{" "}
-            <strong style={{ color: "var(--text)", fontWeight: 500 }}>
-              Mathematics;
-            </strong>{" "}
-            which means I approach problems analytically before I approach them
-            creatively. I don&apos;t just build what looks good. I build what works.
+          <p className="mb-5" style={{ color: "var(--muted)", fontWeight: 300, lineHeight: 1.9 }}>
+            I studied <strong style={{ color: "var(--text)", fontWeight: 500 }}>Mathematics</strong> and spent my first working years
+            teaching it, first as a maths instructor at uLesson, then reviewing
+            curriculum at Slate NG. Teaching taught me the thing I still build by:
+            if people can&apos;t follow it, it doesn&apos;t work, no matter how
+            clever it is.
           </p>
-          <p
-            className="mb-5"
-            style={{ color: "var(--muted)", fontWeight: 300, lineHeight: 1.9 }}
-          >
-            Over the past few years I&apos;ve shipped full production products, an{" "}
-            <strong style={{ color: "var(--text)", fontWeight: 500 }}>
-              EdTech platform
-            </strong>{" "}
-            handling multi-currency payments and automated scheduling, a{" "}
-            <strong style={{ color: "var(--text)", fontWeight: 500 }}>
-              headless CMS
-            </strong>{" "}
-            for an investment firm, and multiple dashboards with complex
-            role-based access systems.
+          <p className="mb-5" style={{ color: "var(--muted)", fontWeight: 300, lineHeight: 1.9 }}>
+            So when I moved into code, I kept building for real people. Today I
+            build <strong style={{ color: "var(--text)", fontWeight: 500 }}>full products</strong>, from the screens people use to the
+            Supabase backends, Paystack payments and admin dashboards behind them.
+            A lot of my work is in <strong style={{ color: "var(--text)", fontWeight: 500 }}>EdTech</strong>, because that&apos;s where I
+            come from, but I&apos;ve also built for a venture fund, a secondhand
+            marketplace and a livestock farm.
           </p>
-          <p
-            style={{ color: "var(--muted)", fontWeight: 300, lineHeight: 1.9 }}
-          >
-            I'm also a{" "}
-            <strong style={{ color: "var(--text)", fontWeight: 500 }}>
-              Subject Matter Content Analyst
-            </strong>
-            , which keeps me sharp on the intersection of content, curriculum,
-            and user experience.
+          <p style={{ color: "var(--muted)", fontWeight: 300, lineHeight: 1.9 }}>
+            I&apos;m based in Abuja, Nigeria. I like clear, honest work that people
+            actually use, and I like finishing what I start. If you&apos;re building
+            something and need someone who&apos;ll care about it as much as you do,
+            let&apos;s talk.
           </p>
         </div>
 
