@@ -55,7 +55,7 @@ export default function WorldsCarousel() {
     cards.current[mod(tgt.current)]?.focus({ preventScroll: true });
   }, []);
 
-  // Lock page scroll while a world is open, and move focus into the panel
+  // Lock page scroll while a product is open, and move focus into the panel
   useEffect(() => {
     if (!open) return;
     const root = document.documentElement;
@@ -69,19 +69,6 @@ export default function WorldsCarousel() {
       root.style.overflow = prev;
     };
   }, [open]);
-
-  // Orbit cards in the hero ask for a world by index
-  useEffect(() => {
-    const onOpen = (e: Event) => {
-      const i = (e as CustomEvent<{ index: number }>).detail.index;
-      setOpen(false);
-      jump(i);
-      scrollToSection();
-      setTimeout(() => setOpen(true), 700);
-    };
-    window.addEventListener("worlds:open", onOpen);
-    return () => window.removeEventListener("worlds:open", onOpen);
-  }, [jump]);
 
   // Keyboard and swipe
   useEffect(() => {
@@ -193,7 +180,7 @@ export default function WorldsCarousel() {
 
       <div className="cz-head">
         <h2 className="font-display">Pick a product to explore</h2>
-        <p>Use the arrows or swipe to move between projects. Select one to see the details.</p>
+        <p>Use the arrows or swipe to move between products. Select one to see the details.</p>
       </div>
 
       <div ref={ring} className="cz-ring">

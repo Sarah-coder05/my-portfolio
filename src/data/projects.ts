@@ -54,6 +54,33 @@ export const PROJECTS: Project[] = [
     githubUrl: "https://github.com/Sarah-coder05/vikidemy_hub",
   },
   {
+    slug: "vikidemy-teachers",
+    company: "Vikidemy Teachers",
+    tag: "EdTech · Full-stack",
+    sector: "EdTech",
+    status: "In development",
+    subtitle: "Tools for independent tutors to schedule, teach and get paid",
+    accent: "#1ea8d1",
+    summary:
+      "Vikidemy Teachers lets tutors run their own tutoring with their own students. A tutor shares a profile link, learners sign up and buy class credits, book the tutor's free slots and join live classes in the browser. Payments go through Paystack, and the tutor's share lands in their bank the next working day. On Vikidemy Hub, Vikidemy matches students with its educators. Here the tutor brings their own students.",
+    role: "Full-stack developer",
+    platform: "Responsive web",
+    stack: ["Next.js", "TypeScript", "Supabase", "Paystack", "Live video"],
+    did: [
+      "Built tutor sign-up, login and onboarding: about you, what you teach, time zone",
+      "Built public tutor profiles with a shareable link learners sign up from",
+      "Built class-credit bundles and checkout with Paystack, with a breakdown of every payment",
+      "Built availability and booking, shown in each person's own time zone",
+      "Built a live classroom in the browser, with no app to install and no meeting link to share",
+      "Built session tracking (upcoming, live, missed, log pending), session logs and email reminders",
+    ],
+    images: [
+      { src: "/projects/vikidemy-teachers-home.jpg", alt: "Vikidemy Teachers landing page with the tutor dashboard and a live class" },
+      { src: "/projects/vikidemy-teachers-features.jpg", alt: "Vikidemy Teachers features: students, booking and session tracking" },
+      { src: "/projects/vikidemy-teachers-payments.jpg", alt: "Vikidemy Teachers pricing with an example payment breakdown" },
+    ],
+  },
+  {
     slug: "velocity-digital",
     company: "Velocity Digital",
     tag: "Venture capital · Freelance",

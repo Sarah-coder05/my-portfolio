@@ -1,5 +1,5 @@
 import Navbar from "@/components/navbar";
-import OrbitHero from "@/components/cosmic/OrbitHero";
+import Hero from "@/components/cosmic/Hero";
 import WorldsCarousel from "@/components/cosmic/WorldsCarousel";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <OrbitHero />
+        <Hero />
         <WorldsCarousel />
         <div className="section-divider" />
         <CoreExpertise />
