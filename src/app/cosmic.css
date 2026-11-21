@@ -563,12 +563,12 @@ html.light .cz-glow {
   border-radius: 50%;
   background: radial-gradient(
     circle at 32% 28%,
-    color-mix(in oklch, var(--accent) 45%, #fff) 0%,
-    var(--accent) 38%,
-    color-mix(in oklch, var(--accent) 40%, var(--planet-dark)) 100%
+    color-mix(in oklch, var(--accent) 30%, #fff) 0%,
+    color-mix(in oklch, var(--accent) 65%, #fff) 45%,
+    color-mix(in oklch, var(--accent) 85%, #fff) 100%
   );
   box-shadow: 0 0 80px color-mix(in oklch, var(--accent) var(--planet-glow-pct), transparent);
-  opacity: 0.85;
+  opacity: 0.75;
   pointer-events: none;
 }
 .about-img {
